@@ -40,10 +40,10 @@
 ## Licensing
 All our projects **excluding** libraries we use as they might have different licenses use GPU v3!
 
-## Donating
+## Documentation
 N/A
 
-## Documentation
+## Donating
 N/A
 
 [discord-shield]: https://img.shields.io/discord/182615261403283459.svg?style=for-the-badge
