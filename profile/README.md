@@ -7,25 +7,25 @@
 </div>
 
 <!-- Table of Contents -->
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#licensing">License</a></li>
-    <li><a href="#donating">Donating</a></li>
-    <li><a href="#documentation>Documentation</a></li>
+    <li><a href="#documentation">Documentation</a></li>
+    <li><a href="#donating">Donations</a></li>
   </ol>
 </details>
 
-<!-- Project Links -->
 <details>
   <summary>Project Links</summary>
-  <ol>
+   <ol>
     <li><a href="https://github.com/Crazy-Crew/Crazy-Enchantments">CrazyEnchantments</a></li>
     <li><a href="https://github.com/Crazy-Crew/Crazy-Auctions">CrazyAuctions</a></li>
     <li><a href="https://github.com/Crazy-Crew/Crazy-Envoys">CrazyEnvoys</a></li>
     <li><a href="https://github.com/Crazy-Crew/Crazy-Crates">CrazyCrates</a></li>
     <li><a href="https://github.com/Crazy-Crew/Vouchers">Vouchers</a></li>
-  </ol>
+   </ol>
 </details>
 
 <details>
