@@ -39,7 +39,7 @@
 </details>
 
 ## Licensing
-All our projects **excluding** libraries we use as they might have different licenses use GPU v3!
+All our projects use GPU v3! ( excludes any libraries we use, they might have different licenses )
 
 ## Documentation
 N/A
