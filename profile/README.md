@@ -44,7 +44,7 @@ All our projects **excluding** libraries we use as they might have different lic
 ## Documentation
 N/A
 
-## Support
+## Donations
 https://opencollective.com/crazycrew
 
 [discord-shield]: https://img.shields.io/discord/182615261403283459.svg?style=for-the-badge
