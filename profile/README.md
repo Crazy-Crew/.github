@@ -21,10 +21,10 @@
 <details>
   <summary>Project Links</summary>
    <ol>
-    <li><a href="https://github.com/Crazy-Crew/Crazy-Enchantments">CrazyEnchantments</a></li>
-    <li><a href="https://github.com/Crazy-Crew/Crazy-Auctions">CrazyAuctions</a></li>
-    <li><a href="https://github.com/Crazy-Crew/Crazy-Envoys">CrazyEnvoys</a></li>
-    <li><a href="https://github.com/Crazy-Crew/Crazy-Crates">CrazyCrates</a></li>
+    <li><a href="https://github.com/Crazy-Crew/CrazyEnchantments">CrazyEnchantments</a></li>
+    <li><a href="https://github.com/Crazy-Crew/CrazyAuctions">CrazyAuctions</a></li>
+    <li><a href="https://github.com/Crazy-Crew/CrazyEnvoys">CrazyEnvoys</a></li>
+    <li><a href="https://github.com/Crazy-Crew/CrazyCrates">CrazyCrates</a></li>
     <li><a href="https://github.com/Crazy-Crew/Vouchers">Vouchers</a></li>
    </ol>
 </details>
