@@ -62,7 +62,7 @@ Please check the individual README of every project for insight on this.
     
   [<img src="https://raw.githubusercontent.com/modrinth/art/main/Branding/Favicon/favicon__512x512.png" alt="Modrinth Logo" height="75">](https://modrinth.com/)
     
-   [Modrinth](https://modrinth.com/), Looking for a good place to browse mods, plugins & soon to be resource packs? Consider checking out Modrinth!
+   [Modrinth](https://modrinth.com/), Looking for a good place to browse mods, plugins & resource packs? Consider checking out Modrinth!
 
   </td>
 
