@@ -47,6 +47,26 @@ https://badbones69.com/docs
 ## Donations
 https://opencollective.com/crazycrew
 
+## Contributions
+Please check the individual README of every project for insight on this.
+
+## Thank You
+
+<table>
+<tr>
+
+<td>
+
+### JetBrains
+
+[<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" height="75">](https://www.jetbrains.com)
+
+[JetBrains](https://www.jetbrains.com/), supplied us with one of their [Open Source Licenses](https://www.jetbrains.com/opensource/). Intellij is a recommended idea to work with any of our projects!
+
+</td>
+</tr>
+</table>
+
 [discord-shield]: https://img.shields.io/discord/182615261403283459.svg?style=for-the-badge
 [discord-url]: https://discord.badbones69.com
 
