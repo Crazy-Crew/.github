@@ -42,7 +42,7 @@
 All our projects use GPU v3! ( excludes any libraries we use, they might have different licenses )
 
 ## Documentation
-N/A
+https://badbones69.com/docs
 
 ## Donations
 https://opencollective.com/crazycrew
