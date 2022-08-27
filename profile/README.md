@@ -61,13 +61,9 @@ Please check the individual README of every project for insight on this.
     
   [<img src="https://raw.githubusercontent.com/modrinth/art/main/Branding/Favicon/favicon__512x512.png" alt="Modrinth Logo" height="75">](https://modrinth.com/)
     
-   [Modrinth](https://modrinth.com/), They have supplied us a great platform where we can post our plugins but they aren't limited to plugins, They also have a "mods" section for Fabric & Forge so definitely check them out! I hear they have a lot of nifty things also coming out.
+   [Modrinth](https://modrinth.com/), Looking for a good place to browse plugins, mods & soon to be resource packs? Consider checking out Modrinth!
 
   </td>
-
- </tr>
-  
- <tr>
 
   <td>
 
@@ -79,17 +75,13 @@ Please check the individual README of every project for insight on this.
 
   </td>
 
- </tr>
-  
- <tr>
-
   <td>
 
   ### JetBrains
 
   [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" height="75">](https://www.jetbrains.com)
 
-  [JetBrains](https://www.jetbrains.com/), supplied us with one of their [Open Source Licenses](https://www.jetbrains.com/opensource/). Intellij is a  recommended idea to work with any of our projects!
+  [JetBrains](https://www.jetbrains.com/), supplied us with one of their [Open Source Licenses](https://www.jetbrains.com/opensource/). Intellij is a  recommended IDE to work with any of our projects!
 
   </td>
 
