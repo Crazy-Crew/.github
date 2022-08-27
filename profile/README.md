@@ -33,7 +33,7 @@
   <summary>Maintenance Mode</summary>
    <ol>
      <li><a href="https://github.com/Crazy-Crew/EpicSellChest">EpicSellChest</a></li>
-     <li><a href="https://github.com/Crazy-Crew/BlockParticles">BlockParticles</a></li>
+     <li><a href="https://github.com/Crazy-Crew/CrazyParticles">CrazyParticles</a></li>
      <li><a href="https://github.com/Crazy-Crew/CrazyWarps">CrazyWarps</a></li>
    </ol>
 </details>
