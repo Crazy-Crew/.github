@@ -15,6 +15,7 @@
     <li><a href="#licensing">License</a></li>
     <li><a href="#documentation">Documentation</a></li>
     <li><a href="#donating">Donations</a></li>
+    <li><a href="#contributions">Contributions</a></li>
   </ol>
 </details>
 
