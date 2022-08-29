@@ -12,6 +12,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#licensing">License</a></li>
     <li><a href="#documentation">Documentation</a></li>
     <li><a href="#donating">Donations</a></li>
@@ -38,6 +39,9 @@
      <li><a href="https://github.com/Crazy-Crew/CrazyWarps">CrazyWarps</a></li>
    </ol>
 </details>
+
+## Contact
+  [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.badbones69.com)
 
 ## Licensing
 All our projects use GPU v3! ( excludes any libraries we use, they might have different licenses )
