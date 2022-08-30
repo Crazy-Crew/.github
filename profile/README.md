@@ -3,7 +3,7 @@
   <h2 align="center">Welcome to Crazy Crew!</h2>
 
 [![Contact][discord-shield]][discord-url]
-[![Contact][opencollective-shield]][opencollective-url]
+<!--[![Contact][opencollective-shield]][opencollective-url]-->
 
 </div>
 
@@ -50,7 +50,8 @@ All our projects use GPU v3! ( excludes any libraries we use, they might have di
 https://badbones69.com/docs
 
 ## Donations
-https://opencollective.com/crazycrew
+<!--https://opencollective.com/crazycrew-->
+N/A
 
 ## Contributions
 Please check the individual README of every project for insight on this.
