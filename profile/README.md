@@ -3,7 +3,7 @@
   <h2 align="center">Welcome to Crazy Crew!</h2>
 
 [![Contact][discord-shield]][discord-url]
-<!--[![Contact][opencollective-shield]][opencollective-url]-->
+[![OC][opencollective-shield]][opencollective-url]
 
 </div>
 
