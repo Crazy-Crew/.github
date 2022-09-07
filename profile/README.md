@@ -41,7 +41,7 @@
 </details>
 
 ## Contact
-  [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.badbones69.com)
+  [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.gg/crazycrew)
 
 ## Licensing
 All our projects use GPU v3! ( excludes any libraries we use, they might have different licenses )
@@ -50,8 +50,9 @@ All our projects use GPU v3! ( excludes any libraries we use, they might have di
 https://badbones69.com/docs
 
 ## Donations
-<!--https://opencollective.com/crazycrew-->
-N/A
+https://opencollective.com/crazycrew
+
+You can also use Github Sponsors as well!
 
 ## Contributions
 Please check the individual README of every project for insight on this.
