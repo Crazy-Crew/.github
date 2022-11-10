@@ -74,11 +74,11 @@ Please check the individual README of every project for insight on this.
 
   <td>
 
-  ### Apex Hosting
+  ### Placeholder
 
-  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/crazycrew/apex/apex_cube.png" alt="ApexHosting Logo" height="75">](https://billing.apexminecrafthosting.com/aff.php?aff=5511)
+  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/Question.png" alt="Placeholder Logo" height="75">](#)
     
-  [ApexHosting](https://apexminecrafthosting.com/), Looking for a new server host or would like to switch? Considering checking out our partner Apex Hosting.
+  [Placeholder](#), Looking for a new server host or would like to switch? Considering checking out our partner Placeholder.
 
   </td>
 
