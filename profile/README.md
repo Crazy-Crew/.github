@@ -50,9 +50,7 @@ All our projects use GPU v3! ( excludes any libraries we use, they might have di
 https://badbones69.com/docs
 
 ## Donations
-https://opencollective.com/crazycrew
-
-You can also use Github Sponsors as well!
+https://github.com/sponsors/Crazy-Crew
 
 ## Contributions
 Please check the individual README of every project for insight on this.
