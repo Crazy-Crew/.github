@@ -2,9 +2,6 @@
 
   <h2 align="center">Welcome to Crazy Crew!</h2>
 
-[![Contact][discord-shield]][discord-url]
-[![OC][opencollective-shield]][opencollective-url]
-
 </div>
 
 <!-- Table of Contents -->
@@ -93,9 +90,3 @@ Please check the individual README of every project for insight on this.
  </tr>
   
 </table>
-
-[discord-shield]: https://img.shields.io/discord/182615261403283459.svg?style=for-the-badge
-[discord-url]: https://discord.badbones69.com
-
-[opencollective-shield]: https://img.shields.io/opencollective/backers/crazycrew?color=ff3e00&style=for-the-badge
-[opencollective-url]: https://opencollective.com/crazycrew
