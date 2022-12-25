@@ -41,10 +41,10 @@
   [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.gg/crazycrew)
 
 ## Licensing
-All our projects use GPU v3! ( excludes any libraries we use, they might have different licenses )
+All our projects use MIT!
 
 ## Documentation
-https://badbones69.com/docs
+Check out each project repository for the wiki.
 
 ## Donations
 https://github.com/sponsors/Crazy-Crew
