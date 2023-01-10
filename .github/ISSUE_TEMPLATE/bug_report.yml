@@ -1,6 +1,10 @@
-name: Bug report
+name: Bug Report
 description: Create a report to help us improve our plugins.
+title: "[Bug]: "
 labels: [bug]
+assigness:
+ - ryderbelserion
+
 body:
   - type: markdown
     attributes:
@@ -44,3 +48,9 @@ body:
       description: Add any other context about the problem here.
     validations:
       required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
