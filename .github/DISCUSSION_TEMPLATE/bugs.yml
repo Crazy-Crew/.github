@@ -9,7 +9,7 @@ body:
 
         What plugin version are you on? Type /version `plugin-name`
 
-        Add any gif / imgur links if need be.
+        Add any gif / imgur links if need be. Markdown is supported!
 
         If you have any large stack traces / errors, Please use https://mclo.gs/
   - type: dropdown
@@ -22,6 +22,19 @@ body:
         - 1.12.2
         - 1.16.5
         - 1.19
+    validations:
+      required: true
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Server Plugin
+      description: What plugin are you using?
+      options:
+        - CrazyCrates
+        - CrazyEnvoys
+        - CrazyVouchers
+        - CrazyEnchantments
+        - ChatManager
     validations:
       required: true
   - type: textarea
