@@ -18,6 +18,7 @@ body:
         - CrazyEnvoys
         - CrazyVouchers
         - CrazyEnchantments
+        - CrazyAuctions
         - ChatManager
     validations:
       required: true
