@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discord
+    about: Join our Discord to ask questions or hang out!
+    url: https://discord.gg/crazycrew
+  - name: Community support
+    about: Get community support here! Make sure you state what plugin you are using & what you need help with.
+    url: https://github.com/Crazy-Crew/.github/discussions/categories/support
