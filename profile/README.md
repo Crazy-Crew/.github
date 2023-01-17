@@ -46,7 +46,7 @@ All our projects use MIT!
 ## Documentation
 Check out each project repository for the wiki.
 
-## Donations
+## Support Us
 https://github.com/sponsors/Crazy-Crew
 
 ## Contributions
