@@ -24,7 +24,7 @@
     <li><a href="https://github.com/Crazy-Crew/CrazyAuctions">CrazyAuctions</a></li>
     <li><a href="https://github.com/Crazy-Crew/CrazyEnvoys">CrazyEnvoys</a></li>
     <li><a href="https://github.com/Crazy-Crew/CrazyCrates">CrazyCrates</a></li>
-    <li><a href="https://github.com/Crazy-Crew/Vouchers">Vouchers</a></li>
+    <li><a href="https://github.com/Crazy-Crew/CrazyVouchers">CrazyVouchers</a></li>
    </ol>
 </details>
 
