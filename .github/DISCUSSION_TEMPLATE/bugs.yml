@@ -12,6 +12,11 @@ body:
         Add any gif / imgur links if need be. Markdown is supported!
 
         If you have any large stack traces / errors, Please use https://mclo.gs/
+  - type: input
+    attributes:
+      label: Spark link
+      description: We ask that Spark profilings are shared through a link, not a screenshot. Screenshots inhibit our ability to figure out the real cause of the issue.
+      placeholder: Output of /spark profiler --timeout 300
   - type: dropdown
     id: version
     attributes:
@@ -63,3 +68,14 @@ body:
       description: Add any other context about the problem here.
     validations:
       required: false
+  - type: checkboxes
+    attributes:
+      label: Agreements
+      description: Please agree to the following.
+      options:
+        - label: I have searched for and ensured there isn't already an open issue regarding this.
+          required: true
+        - label: I ticked all the boxes without actually reading them
+          required: false
+        - label: My version of Minecraft is supported by CrazyCrew.
+          required: true
