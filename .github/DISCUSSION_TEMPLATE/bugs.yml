@@ -12,11 +12,15 @@ body:
         Add any gif / imgur links if need be. Markdown is supported!
 
         If you have any large stack traces / errors, Please use https://mclo.gs/
+
+        Spark Profiler > https://spark.lucko.me/download
   - type: input
     attributes:
-      label: Spark link > https://spark.lucko.me/download
+      label: Spark link
       description: We ask that Spark profilings are shared through a link, not a screenshot. Screenshots inhibit our ability to figure out the real cause of the issue.
       placeholder: Output of /spark profiler --timeout 300
+    validations:
+      required: false
   - type: dropdown
     id: version
     attributes:
