@@ -61,7 +61,7 @@ Please check the individual README of every project for insight on this.
 
   ### Modrinth
     
-  [<img src="https://raw.githubusercontent.com/modrinth/art/main/Branding/Favicon/favicon__512x512.png" alt="Modrinth Logo" height="75">](https://modrinth.com/)
+  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/modrinth.webp" alt="Modrinth Logo" height="75">](https://modrinth.com/)
     
    [Modrinth](https://modrinth.com/), Looking for a good place to browse mods, plugins & resource packs? Consider checking out Modrinth!
 
@@ -71,7 +71,7 @@ Please check the individual README of every project for insight on this.
 
   ### Apex Hosting
 
-  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/hosting/apexhosting/apex-cube-white.png" alt="Apex Hosting" height="75">](#)
+  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/builtbybit.webp" alt="Apex Hosting" height="75">](#)
     
   [Apex Hosting](https://billing.apexminecrafthosting.com/aff.php?aff=5511), Are you looking to switch hosts? Considering checking out our partner Apex Hosting!
 
@@ -81,7 +81,7 @@ Please check the individual README of every project for insight on this.
 
   ### JetBrains
 
-  [<img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" alt="JetBrains Logo" height="75">](https://www.jetbrains.com)
+  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/jetbrains.webp" alt="JetBrains Logo" height="75">](https://www.jetbrains.com)
 
   [JetBrains](https://www.jetbrains.com/), supplied us with one of their [Open Source Licenses](https://www.jetbrains.com/opensource/). Intellij is a  recommended IDE to work with any of our projects!
 
