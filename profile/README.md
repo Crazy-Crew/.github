@@ -71,7 +71,7 @@ Please check the individual README of every project for insight on this.
 
   ### Apex Hosting
 
-  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/builtbybit.webp" alt="Apex Hosting" height="75">](#)
+  [<img src="https://raw.githubusercontent.com/RyderBelserion/Assets/main/branding/apexhosting/webp/apex-cube-white.webp" alt="Apex Hosting" height="75">](#)
     
   [Apex Hosting](https://billing.apexminecrafthosting.com/aff.php?aff=5511), Are you looking to switch hosts? Considering checking out our partner Apex Hosting!
 
