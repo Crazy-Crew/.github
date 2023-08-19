@@ -47,7 +47,7 @@ All our projects use MIT!
 Check out each project repository for the wiki.
 
 ## Support Us
-https://github.com/sponsors/Crazy-Crew
+https://ko-fi.com/ryderbelserion
 
 ## Contributions
 Please check the individual README of every project for insight on this.
