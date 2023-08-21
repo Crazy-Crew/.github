@@ -7,7 +7,7 @@ body:
       value: |
         Note: Search to make sure you aren't suggesting a duplicate feature.
         
-        You can include screen-shots or gif examples of what you want to achieve.
+        You can include screen-shots or gif/video examples of what you want to achieve.
   - type: textarea
     id: feature
     attributes:

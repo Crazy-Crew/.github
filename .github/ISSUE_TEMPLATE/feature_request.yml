@@ -10,11 +10,13 @@ body:
   - type: markdown
     attributes:
       value: |
-        Note: Search to see if a feature request has already been made.
+        Note: Search to make sure you aren't suggesting a duplicate feature.
+        
+        You can include screen-shots or gif/video examples of what you want to achieve.
   - type: textarea
-    id: steps
+    id: feature
     attributes:
-      label: Feature Request
-      description: Describe your feature in detail and why it would be useful.
+      label: Describe the feature
+      description: A clear and concise description of what the feature is.
     validations:
       required: true
