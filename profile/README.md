@@ -38,7 +38,7 @@
 </details>
 
 ## Contact
-  [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.gg/crazycrew)
+  [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.gg/badbones-s-live-chat-182615261403283459)
 
 ## Licensing
 All our projects use MIT!
