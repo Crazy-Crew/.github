@@ -41,7 +41,7 @@
   [![Join us on Discord](https://discord.com/api/guilds/182615261403283459/widget.png?style=banner2)](https://discord.gg/badbones-s-live-chat-182615261403283459)
 
 ## Licensing
-All our projects use a mix of MIT and GPLv2
+All our projects use MIT.
 
 ## Documentation
 https://docs.crazycrew.us/
