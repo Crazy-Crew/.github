@@ -41,7 +41,7 @@ body:
     id: platform
     attributes:
       label: Server Platform
-      description: What server platform are you using?
+      description: What server platform are you using? Spigot is no longer supported. Please update to https://papermc.io
       options:
         - Spigot
         - Paper
