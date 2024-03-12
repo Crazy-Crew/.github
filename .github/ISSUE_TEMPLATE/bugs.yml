@@ -32,8 +32,6 @@ body:
       label: Server Version
       description: What server version are you on?
       options:
-        - 1.20.1
-        - 1.20.2
         - 1.20.4
     validations:
       required: true
