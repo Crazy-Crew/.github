@@ -61,6 +61,7 @@ body:
       description: What crate type are you using with this bug? Only fill this out if you are using CrazyCrates
       options:
         - Cosmic
+        - Casino
         - CrateOnTheGo
         - CSGO
         - FireCracker
