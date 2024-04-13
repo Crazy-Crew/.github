@@ -21,8 +21,6 @@
   <summary>Project Links</summary>
    <ol>
     <li><a href="https://github.com/Crazy-Crew/CrazyEnchantments">CrazyEnchantments</a></li>
-    <li><a href="https://github.com/Crazy-Crew/BlockParticles">BlockParticles</a></li>
-    <li><a href="https://github.com/Crazy-Crew/CrazyAuctions">CrazyAuctions</a></li>
     <li><a href="https://github.com/Crazy-Crew/CrazyEnvoys">CrazyEnvoys</a></li>
     <li><a href="https://github.com/Crazy-Crew/CrazyCrates">CrazyCrates</a></li>
     <li><a href="https://github.com/Crazy-Crew/CrazyVouchers">CrazyVouchers</a></li>
@@ -32,6 +30,8 @@
 <details>
   <summary>Maintenance Mode</summary>
    <ol>
+     <li><a href="https://github.com/Crazy-Crew/BlockParticles">BlockParticles</a></li>
+     <li><a href="https://github.com/Crazy-Crew/CrazyAuctions">CrazyAuctions</a></li>
      <li><a href="https://github.com/Crazy-Crew/EpicSellChest">EpicSellChest</a></li>
      <li><a href="https://github.com/Crazy-Crew/CrazyWarps">CrazyWarps</a></li>
    </ol>
@@ -45,9 +45,6 @@ All our projects use MIT.
 
 ## Documentation
 https://docs.crazycrew.us/
-
-## Support Us
-https://ko-fi.com/ryderbelserion
 
 ## Contributions
 Please check the individual README of every project for insight on this.

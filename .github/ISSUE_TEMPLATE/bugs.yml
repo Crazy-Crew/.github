@@ -22,7 +22,7 @@ body:
   - type: input
     attributes:
       label: Spark link
-      description: We ask that Spark profilings are shared through a link, not a screenshot. Screenshots inhibit our ability to figure out the real cause of the issue.
+      description: We ask that Spark profile are shared through a link, not a screenshot. Screenshots inhibit our ability to figure out the real cause of the issue.
       placeholder: Output of /spark profiler --timeout 300
     validations:
       required: false
@@ -32,7 +32,11 @@ body:
       label: Server Version
       description: What server version are you on?
       options:
-        - 1.20.4
+        - "1.20.1"
+        - "1.20.2"
+        - "1.20.4"
+        - "1.20.5"
+        - "1.21"
     validations:
       required: true
   - type: dropdown
