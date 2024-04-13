@@ -1,4 +1,4 @@
-## CrazyCrew
+## Welcome to CrazyCrew
 CrazyCrew is an organization creating Minecraft Plugins to improve the plugin ecosystem, A crazy organization by crazy people for crazy people.
 
 **Quicklinks**
