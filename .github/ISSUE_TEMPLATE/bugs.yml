@@ -23,7 +23,7 @@ body:
       placeholder: Output of /spark profiler --timeout 300
     validations:
       required: false
-  - type: textarea
+  - type: input
     id: plugin_version
     attributes:
       label: Plugin Version
