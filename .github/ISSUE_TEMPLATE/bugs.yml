@@ -11,13 +11,11 @@ body:
       value: |
         Note: Search to see if an issue already exists for the bug you are reporting.
 
-        What plugin version are you on? Type /version `plugin-name`
-
         Add any gif / imgur links if need be. Markdown is supported!
 
         If you have any large stack traces / errors, Please use https://mclo.gs/
 
-        Spark Profiler > https://spark.lucko.me/download
+        Spark > https://spark.lucko.me/download
   - type: input
     attributes:
       label: Spark link
@@ -25,6 +23,13 @@ body:
       placeholder: Output of /spark profiler --timeout 300
     validations:
       required: false
+  - type: textarea
+    id: plugin_version
+    attributes:
+      label: Plugin Version
+      description: Type /version plugin-name in-game
+    validations:
+      required: true
   - type: dropdown
     id: version
     attributes:
