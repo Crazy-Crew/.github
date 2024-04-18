@@ -1,4 +1,5 @@
-labels: ["type: feature"]
+name: Feature Request
+labels: [ "status: needs triage", "type: feature" ]
 
 body:
   - type: markdown
