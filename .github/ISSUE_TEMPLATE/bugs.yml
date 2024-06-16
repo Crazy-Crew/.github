@@ -62,25 +62,6 @@ body:
       description: A clear and concise description of what the bug is.
     validations:
       required: true
-  - type: dropdown
-    id: crate_type
-    attributes:
-      label: Crate Type
-      description: What crate type are you using with this bug? Only fill this out if you are using CrazyCrates
-      options:
-        - Cosmic
-        - Casino
-        - CrateOnTheGo
-        - CSGO
-        - FireCracker
-        - QuadCrate
-        - QuickCrate
-        - Roulette
-        - War
-        - Wheel
-        - Wonder
-    validations:
-      required: false
   - type: textarea
     id: steps
     attributes:
