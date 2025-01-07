@@ -1,0 +1,5 @@
+{
+  "name": "Issue Assign Workflow",
+  "description": "The workflow template for automatically assigning issues.",
+  "iconName": "octicon smiley"
+}
