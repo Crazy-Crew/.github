@@ -2,9 +2,11 @@ name: Issue Assignment
 
 on:
   issues:
+    branches: [ $default-branch ]
     types: [opened]
 
   pull_request:
+    branches: [ $default-branch ]
     types: [opened]
 
 jobs:
