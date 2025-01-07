@@ -2,15 +2,15 @@ name: Issue Assignment
 
 on:
   issues:
-    branches: [ $default-branch ]
+    branches: [ "main" ]
     types: [opened]
 
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ "main" ]
     types: [opened]
 
 jobs:
-  run:
+  auto-assign:
     runs-on: ubuntu-latest
 
     permissions:
@@ -18,10 +18,9 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: 'Auto-assign issue'
+      - name: 'Assign Issue / Pull Request'
         uses: pozil/auto-assign-issue@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GH_TOKEN }}
           assignees: ryderbelserion
           numOfAssignee: 1
-          allowSelfAssign: false
