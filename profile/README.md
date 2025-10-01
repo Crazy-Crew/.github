@@ -3,9 +3,9 @@ CrazyCrew is an organization creating Minecraft Plugins to improve the plugin ec
 
 **Quicklinks**
 * Get plugin downloads on [modrinth](https://modrinth.com/organization/crazycrew) or [hangar](https://hangar.papermc.io/CrazyCrew)
-  * ~~[curseforge](https://www.curseforge.com/members/ryderbelserion/projects)~~ outdated (for now maybe)
+  * ~~[curseforge](https://www.curseforge.com/members/ryderbelserion/projects)~~ outdated
     * I have not looked into publishing updates automatically.
-  * ~~[polymart](https://polymart.org/team/crazy-crew.86)~~ outdated
+  * ~~[polymart](https://polymart.org/team/crazy-crew.86)~~ outdated(for now)
     * I have not looked into publishing updates automatically.
 * Join our community by chatting on our Discord Server: [discord](https://discord.gg/badbones-s-live-chat-182615261403283459)
 
