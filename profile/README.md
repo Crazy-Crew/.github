@@ -26,5 +26,3 @@ CrazyCrew is an organization creating Minecraft Plugins to improve the plugin ec
 </td>
 </tr>
 </table>
-
-Intellij used to be up there, but since they revoked open source licenses(-_-), we had no need for this section.
