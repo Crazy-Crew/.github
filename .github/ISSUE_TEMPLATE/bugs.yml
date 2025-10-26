@@ -99,3 +99,7 @@ body:
           required: false
         - label: My version of Minecraft is supported by CrazyCrew.
           required: true
+        - label: I have tested without being OPed.
+          required: true
+        - label: I have tested while being in survival mode.
+          required: true
