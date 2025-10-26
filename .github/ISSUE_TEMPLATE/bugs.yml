@@ -27,7 +27,7 @@ body:
     id: plugin_version
     attributes:
       label: Plugin Version
-      description: Type /version plugin-name in-game
+      description: Type /version plugin-name in-game.
     validations:
       required: true
   - type: dropdown
@@ -95,7 +95,7 @@ body:
       options:
         - label: I have searched for and ensured there isn't already an open issue regarding this.
           required: true
-        - label: I ticked all the boxes without actually reading them
+        - label: I ticked all the boxes without actually reading them.
           required: false
         - label: My version of Minecraft is supported by CrazyCrew.
           required: true
