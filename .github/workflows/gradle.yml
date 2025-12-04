@@ -10,6 +10,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+
       - uses: actions/setup-java@v5
         with:
           distribution: temurin
