@@ -1,4 +1,4 @@
-name: Shared Debug Build
+name: Shared Notify
 
 on:
   workflow_call:
@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    if: "!contains(github.event.commits[0].message, '[ci-skip]')"
 
     steps:
       - uses: actions/checkout@v5
@@ -20,5 +22,8 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: Build
-        run: ./gradlew build --stacktrace
+      - name: Notify Discord
+        if: success()
+        run: ./gradlew release-build --stacktrace
+        env:
+          BUILD_WEBHOOK: ${{ secrets.BUILD_WEBHOOK }}

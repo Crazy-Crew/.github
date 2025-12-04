@@ -4,7 +4,7 @@ on:
   workflow_call:
 
 jobs:
-  update-gradle-wrapper:
+  gradle:
     runs-on: ubuntu-latest
 
     steps:
