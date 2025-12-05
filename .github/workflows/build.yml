@@ -2,6 +2,10 @@ name: Shared Build
 
 on:
   workflow_call:
+    inputs:
+      webhook:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -28,21 +32,23 @@ jobs:
       - name: Publish to Modrinth
         run: ./gradlew modrinth --stacktrace
         env:
+          COMMIT_MESSAGE: ${{ join(github.event.commits.*.message, '<br>') }}
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
 
       - name: Publish to Hangar
         run: ./gradlew publishAllPublicationsToHangar --stacktrace
         env:
+          COMMIT_MESSAGE: ${{ join(github.event.commits.*.message, '<br>') }}
           HANGAR_KEY: ${{ secrets.HANGAR_KEY }}
 
       - name: Notify Discord
         if: success()
         run: ./gradlew release-build --stacktrace
         env:
-          BUILD_WEBHOOK: ${{ secrets.BUILD_WEBHOOK }}
+          BUILD_WEBHOOK: ${{ inputs.webhook }}
 
       - name: Build Failure
         if: failure()
         run: ./gradlew failed-build --stacktrace
         env:
-          BUILD_WEBHOOK: ${{ secrets.BUILD_WEBHOOK }}
+          BUILD_WEBHOOK: ${{ inputs.webhook }}
