@@ -2,6 +2,10 @@ name: Shared Notify
 
 on:
   workflow_call:
+    inputs:
+      webhook:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -26,4 +30,4 @@ jobs:
         if: success()
         run: ./gradlew release-build --stacktrace
         env:
-          BUILD_WEBHOOK: ${{ secrets.BUILD_WEBHOOK }}
+          BUILD_WEBHOOK: ${{ inputs.webhook }}
