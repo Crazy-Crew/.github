@@ -2,8 +2,6 @@ name: Update Gradle
 
 on:
   workflow_call:
-  branches-ignore:
-    - "gradle-wrapper-update"
 
 jobs:
   gradle:
