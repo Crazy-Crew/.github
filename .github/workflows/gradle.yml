@@ -14,7 +14,7 @@ jobs:
           app-id: ${{ secrets.APP_ID }}
           private-key: ${{ secrets.APP_SECRET_KEY }}
           owner: ${{ github.repository_owner }}
-          repositories: "CrazyEnchantments,CrazyCrates,CrazyEnvoys,CrazyVouchers,CrazyAuctions,ChatManager"
+          repositories: "CrazyEnchantments,CrazyCrates,CrazyEnvoys,CrazyVouchers,CrazyAuctions,ChatManager,BlockParticles"
 
       - name: Checkout Repository
         uses: actions/checkout@v5
