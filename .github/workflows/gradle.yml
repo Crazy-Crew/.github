@@ -12,7 +12,7 @@ jobs:
         id: generate-token
         with:
           app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          private-key: ${{ secrets.APP_SECRET_KEY }}
 
       - name: Checkout Repository
         uses: actions/checkout@v5
