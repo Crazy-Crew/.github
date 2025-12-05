@@ -45,9 +45,9 @@ jobs:
         id: validation
         run: |
           if git diff --quiet main "${{ github.ref_name }}"; then
-            echo "is_ready=false" >> "$GITHUB_OUTPUT"
+            echo "{is_ready}=false" >> "$GITHUB_OUTPUT"
           else
-            echo "is_ready=true" >> "$GITHUB_OUTPUT"
+            echo "{is_ready}=true" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Pull Request Aborted
