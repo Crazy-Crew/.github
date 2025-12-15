@@ -41,23 +41,23 @@ jobs:
       - name: Verify Gradle Wrapper
         run: ./gradlew --help
 
-      - name: Git Tracker
-        id: validation
-        run: |
-          if git diff --exit-code HEAD~1 HEAD gradle/wrapper/gradle-wrapper.properties; then
-            echo "No gradle changes detected!"
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          else
-            echo "Gradle changes detected!"
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          fi
+      #- name: Git Tracker
+      #  id: validation
+      #  run: |
+      #    if git diff --exit-code HEAD~1 HEAD gradle/wrapper/gradle-wrapper.properties; then
+      #      echo "No gradle changes detected!"
+      #      echo "has_changes=true" >> $GITHUB_OUTPUT
+      #    else
+      #      echo "Gradle changes detected!"
+      #      echo "has_changes=false" >> $GITHUB_OUTPUT
+      #    fi
 
-      - name: Pull Request Aborted
-        if: ${{ steps.validation.outputs.has_changes == 'true' }}
-        run: echo 'The pull request was not created, because no changes were detected!'
+      #- name: Pull Request Aborted
+      #  if: ${{ steps.validation.outputs.has_changes == 'true' }}
+      #  run: echo 'The pull request was not created, because no changes were detected!'
 
       - name: Create Pull Request
-        if: ${{ steps.validation.outputs.has_changes == 'false' }}
+        #if: ${{ steps.validation.outputs.has_changes == 'false' }}
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ steps.generate-token.outputs.token }}
