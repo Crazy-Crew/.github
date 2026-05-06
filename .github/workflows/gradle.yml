@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/create-github-app-token@v2
+      - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
           app-id: ${{ secrets.APP_ID }}
@@ -17,7 +17,7 @@ jobs:
           repositories: "CrazyEnchantments,CrazyCrates,CrazyEnvoys,CrazyVouchers,CrazyAuctions,ChatManager,BlockParticles"
 
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - uses: crazy-max/ghaction-import-gpg@v6
         with:
@@ -30,35 +30,19 @@ jobs:
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: 21
+          java-version: 25
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      #- name: Make gradlew executable
+      #  run: chmod +x ./gradlew
 
       - name: Update Gradle Wrapper
-        run: ./gradlew wrapper --gradle-version latest
+        run: gradle wrapper --gradle-version latest
 
       - name: Verify Gradle Wrapper
-        run: ./gradlew --help
-
-      #- name: Git Tracker
-      #  id: validation
-      #  run: |
-      #    if git diff --exit-code HEAD~1 HEAD gradle/wrapper/gradle-wrapper.properties; then
-      #      echo "No gradle changes detected!"
-      #      echo "has_changes=true" >> $GITHUB_OUTPUT
-      #    else
-      #      echo "Gradle changes detected!"
-      #      echo "has_changes=false" >> $GITHUB_OUTPUT
-      #    fi
-
-      #- name: Pull Request Aborted
-      #  if: ${{ steps.validation.outputs.has_changes == 'true' }}
-      #  run: echo 'The pull request was not created, because no changes were detected!'
+        run: gradle --help
 
       - name: Create Pull Request
-        #if: ${{ steps.validation.outputs.has_changes == 'false' }}
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ steps.generate-token.outputs.token }}
           committer: Ryder Belserion <no-reply@ryderbelserion.com>
