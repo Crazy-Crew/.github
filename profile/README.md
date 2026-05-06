@@ -21,7 +21,7 @@ CrazyCrew is an organization creating Minecraft Plugins to improve the plugin ec
 ### YourKit
 ![YourKit-Logo](https://www.yourkit.com/images/yklogo.png)
 
-[YourKit](https://www.yourkit.com/) supports open source projects with a fullly featured [Java](https://www.yourkit.com/java/profiler) and [.NET](https://www.yourkit.com/.net/profiler) profilers for your favorite Java/.NET application. We are thankful that they have provided us a license to work on making our projects better.
+[YourKit](https://www.yourkit.com/) supports open source projects with a fully featured [Java](https://www.yourkit.com/java/profiler) and [.NET](https://www.yourkit.com/.net/profiler) profilers for your favorite Java/.NET application. We are thankful that they have provided us a license to work on making our projects better.
 
 </td>
 </tr>
