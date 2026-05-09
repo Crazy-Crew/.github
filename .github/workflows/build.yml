@@ -2,6 +2,11 @@ name: Shared Build
 
 on:
   workflow_call:
+    inputs:
+      branch:
+        required: true
+        type: string
+
     secrets:
       webhook:
         required: true
@@ -9,10 +14,6 @@ on:
         required: true
       hangar_token:
         required: true
-    inputs:
-      branch:
-        required: true
-        type: string
 
 jobs:
   build:
