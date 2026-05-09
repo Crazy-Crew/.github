@@ -9,8 +9,10 @@ on:
         required: true
       hangar_token:
         required: true
+    inputs:
       branch:
         required: true
+        type: string
 
 jobs:
   build:
@@ -21,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          ref: ${{ secrets.branch }}
+          ref: ${{ inputs.branch }}
 
       - uses: actions/setup-java@v5
         with:
