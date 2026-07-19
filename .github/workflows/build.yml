@@ -23,6 +23,10 @@ on:
       hangar_token:
         required: true
 
+env:
+  GIT_PREVIOUS_SUCCESSFUL_COMMIT: ${{ github.event.before }}
+  version_status: ${{ inputs.status }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -49,28 +53,22 @@ jobs:
         if: contains(inputs.platforms, 'modrinth')
         run: gradle modrinth --stacktrace
         env:
-          COMMIT_MESSAGE: ${{ join(github.event.commits.*.message, '<br>') }}
           MODRINTH_TOKEN: ${{ secrets.modrinth_token }}
-          version_status: ${{ inputs.status }}
 
       - name: Publish to Hangar
         if: contains(inputs.platforms, 'hangar')
         run: gradle publishAllPublicationsToHangar --stacktrace
         env:
-          COMMIT_MESSAGE: ${{ join(github.event.commits.*.message, '<br>') }}
           HANGAR_KEY: ${{ secrets.hangar_token }}
-          version_status: ${{ inputs.status }}
 
       - name: Notify Discord
         if: success()
         run: gradle release-build --stacktrace
         env:
           BUILD_WEBHOOK: ${{ secrets.webhook }}
-          version_status: ${{ inputs.status }}
 
       - name: Build Failure
         if: failure()
         run: gradle failed-build --stacktrace
         env:
           BUILD_WEBHOOK: ${{ secrets.webhook }}
-          version_status: ${{ inputs.status }}
