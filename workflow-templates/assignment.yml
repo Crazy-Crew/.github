@@ -10,7 +10,7 @@ on:
     types: [opened]
 
 jobs:
-  auto-assign:
+  task:
     runs-on: ubuntu-latest
 
     permissions:
@@ -18,8 +18,8 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: 'Assign Issue / Pull Request'
-        uses: pozil/auto-assign-issue@v2
+      - name: "Assign Issue / Pull Request"
+        uses: pozil/auto-assign-issue@v4
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ryderbelserion
