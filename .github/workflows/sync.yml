@@ -30,4 +30,4 @@ jobs:
       - name: Update Hangar Description
         run: gradle syncPluginPublicationMainResourcePagePageToHangar --stacktrace
         env:
-          HANGAR_TOKEN: ${{ secrets.hangar_token }}
+          HANGAR_KEY: ${{ secrets.hangar_token }}
