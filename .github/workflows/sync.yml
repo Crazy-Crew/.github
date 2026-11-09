@@ -5,6 +5,8 @@ on:
     secrets:
       modrinth_token:
         required: true
+      hangar_token:
+        required: true
 
 jobs:
   build:
@@ -24,3 +26,8 @@ jobs:
         run: gradle modrinthSyncBody --stacktrace
         env:
           MODRINTH_TOKEN: ${{ secrets.modrinth_token }}
+
+      - name: Update Hangar Description
+        run: gradle syncPluginPublicationMainResourcePagePageToHangar --stacktrace
+        env:
+          HANGAR_TOKEN: ${{ secrets.hangar_token }}
