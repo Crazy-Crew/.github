@@ -1,0 +1,37 @@
+name: Build Pull Request
+
+on:
+  workflow_call:
+    inputs:
+      label:
+        required: true
+        type: string
+        default: "build"
+      path:
+        required: true
+        type: string
+        default: "build/libs"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    if: ${{ contains(github.event.pull_request.labels.*.name, ${{ inputs.label }})
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Build Plugin
+        run: gradle build
+
+      - name: Upload Plugin
+        uses: actions/upload-artifact@v7
+        with:
+          path: ${{ inputs.path }}
