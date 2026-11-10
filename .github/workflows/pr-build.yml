@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    if: contains(github.event.pull_request.labels.*.name, ${{ inputs.label }})
+    if: contains(github.event.pull_request.labels.*.name, inputs.label)
 
     steps:
       - uses: actions/checkout@v7
