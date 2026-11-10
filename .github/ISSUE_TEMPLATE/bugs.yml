@@ -27,14 +27,14 @@ body:
     id: plugin_version
     attributes:
       label: Plugin Version
-      description: Type /version plugin-name in-game.
+      description: Type /version plugin-name in-game, and submit the output.
     validations:
       required: true
   - type: input
     id: server_version
     attributes:
       label: Server Version
-      description: Type /version in-game
+      description: Type /version in-game, and submit the output.
     validations:
       required: true
   - type: dropdown
