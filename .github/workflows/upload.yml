@@ -12,6 +12,10 @@ on:
         type: string
         default: "build/libs"
 
+    secrets:
+      gh_token:
+        required: true
+
 permissions:
   contents: read
 
@@ -39,9 +43,10 @@ jobs:
 
       - name: Prepare build number
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.gh_token }}
+          GH_REPO: ${{ github.repository }}
         run: |
-          gh variable set NEXT_BUILD_NUMBER --body "${{ github.event.number }}" --repo "${{ github.repository }}"
+          gh variable set NEXT_BUILD_NUMBER --body "${{ github.event.number }}"
           echo "NEXT_BUILD_NUMBER=${{ github.event.number }}" >> "$GITHUB_ENV"
 
       - name: Upload Plugin
