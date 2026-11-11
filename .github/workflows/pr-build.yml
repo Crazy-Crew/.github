@@ -19,6 +19,14 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, inputs.label)
 
     steps:
+      - uses: actions/create-github-app-token@v3
+        id: generate-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.APP_SECRET_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: "CrazyEnchantments,CrazyCrates,CrazyEnvoys,CrazyVouchers,CrazyAuctions,ChatManager,BlockParticles"
+
       - name: Checkout Local Repository
         uses: actions/checkout@v7
         with:
@@ -29,6 +37,13 @@ jobs:
         with:
           repository: Crazy-Crew/.github
           path: .github
+
+      - uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
 
       - uses: actions/setup-java@v5
         with:
@@ -60,6 +75,6 @@ jobs:
 
       - uses: peter-evans/create-or-update-comment@v4
         with:
+          token: ${{ steps.generate-token.outputs.token }}
           issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'crazy-crew[bot]'
           body: ${{ steps.template.outputs.result }}
