@@ -21,7 +21,7 @@ jobs:
         id: template
         uses: chuhlomin/render-template@v1.4
         with:
-          template: .github/request_opened.md
+          template: .github/.github/request_opened.md
           vars:
             |
             user: ${{ github.event.pull_request.user.login }}
