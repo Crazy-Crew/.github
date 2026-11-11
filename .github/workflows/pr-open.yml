@@ -8,7 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout Local Repository
+        uses: actions/checkout@v7
+
+      - name: Checkout Parent Repository
+        uses: actions/checkout@v7
+        with:
+          repository: Crazy-Crew/.github
+          path: .github
 
       - name: Render template
         id: template
