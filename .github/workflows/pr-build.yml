@@ -7,10 +7,6 @@ on:
         required: true
         type: string
         default: "build"
-      path:
-        required: true
-        type: string
-        default: "build/libs"
 
     secrets:
       app_secret_key:
@@ -57,22 +53,6 @@ jobs:
           passphrase: ${{ secrets.gpg_passphrase }}
           git_user_signingkey: true
           git_commit_gpgsign: true
-
-      - uses: actions/setup-java@v5
-        with:
-          distribution: temurin
-          java-version: 25
-
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v6
-
-      - name: Build Plugin
-        run: gradle build
-
-      - name: Upload Plugin
-        uses: actions/upload-artifact@v7
-        with:
-          path: ${{ inputs.path }}
 
       - name: Render template
         id: template
