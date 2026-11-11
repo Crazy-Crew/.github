@@ -57,9 +57,17 @@ jobs:
             logs: ${{ steps.upload-build.outputs.artifact-url }}
             link: ${{ steps.upload-step.outputs.artifact-url }}
 
+      - name: Find Comment
+        uses: peter-evans/find-comment@v4
+        id: fc
+        with:
+          issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
+          comment-author: crazy-crew
+
       - uses: peter-evans/create-or-update-comment@v5
         with:
           token: ${{ steps.generate-token.outputs.token }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
           body: ${{ steps.template.outputs.result }}
           edit-mode: replace
