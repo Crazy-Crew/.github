@@ -12,6 +12,9 @@ on:
       gpg_passphrase:
         required: true
 
+permissions:
+  actions: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
