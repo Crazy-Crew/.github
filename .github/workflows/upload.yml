@@ -37,12 +37,33 @@ jobs:
       - name: Build
         run: gradle build --stacktrace
 
-      - name: Save PR number
-        run: echo ${{ github.event.number }} > request_number.txt
+      - uses: actions/github-script@v6
+        name: Prepare build number if it doesn't exist
+        with:
+          debug: true
+          script: |
+              const { owner, repo } = context.repo;
 
+              core.info(`Could not find a NEXT_BUILD_NUMBER env variable. Creating a new one with value ${{ github.event.number }}.`);
+
+              const { status, data } = await github.request('POST /repos/{owner}/{repo}/actions/variables', {
+                owner: owner,
+                repo: repo,
+                name: "NEXT_BUILD_NUMBER",
+                value: ${{ github.event.number }},
+                headers: {
+                  'X-GitHub-Api-Version': '2022-11-28'
+                }
+              }).catch(err => err.response);
+            
+              core.debug(JSON.stringify(data, null, 2));
+
+              if (data?.message != undefined) {
+                return core.setFailed(`Failed to update configuration variable NEXT_BUILD_NUMBER with new value of '${{ github.event.number }}' for reason ${data.message}`);
+              }
+            
+              return core.exportVariable("NEXT_BUILD_NUMBER", ${{ github.event.number }});
       - name: Upload Plugin
         uses: actions/upload-artifact@v7
         with:
-          path: |
-            ${{ inputs.path }}
-            request_number.txt
+          path: ${{ inputs.path }}
