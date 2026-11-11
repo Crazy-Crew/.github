@@ -52,7 +52,7 @@ jobs:
           vars:
             |
             user: ${{ github.event.pull_request.user.login }}
-            project: ${{ github.repository }}
+            project: ${{ github.event.repository.name }}
 
       - uses: peter-evans/create-or-update-comment@v4
         with:
