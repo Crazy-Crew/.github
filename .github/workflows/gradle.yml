@@ -2,27 +2,44 @@ name: Update Gradle
 
 on:
   workflow_call:
+    secrets:
+      app_secret_key:
+        required: true
+      app_id:
+        required: true
+      gpg_private_key:
+        required: true
+      gpg_passphrase:
+        required: true
+
+permissions:
+  contents: write
 
 jobs:
   gradle:
     runs-on: ubuntu-latest
 
+    if: github.repository_owner == 'Crazy-Crew' && github.event_name != 'pull_request'
+
     steps:
       - uses: actions/create-github-app-token@v3
         id: generate-token
         with:
-          app-id: ${{ secrets.APP_ID }}
-          private-key: ${{ secrets.APP_SECRET_KEY }}
+          client-id: ${{ secrets.app_id }}
+          private-key: ${{ secrets.app_secret_key }}
           owner: ${{ github.repository_owner }}
-          repositories: "CrazyEnchantments,CrazyCrates,CrazyEnvoys,CrazyVouchers,CrazyAuctions,ChatManager,BlockParticles"
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
 
       - name: Checkout Repository
         uses: actions/checkout@v7
+        with:
+          persist-credentials: false
 
       - uses: crazy-max/ghaction-import-gpg@v6
         with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          gpg_private_key: ${{ secrets.gpg_private_key }}
+          passphrase: ${{ secrets.gpg_passphrase }}
           git_user_signingkey: true
           git_commit_gpgsign: true
 
