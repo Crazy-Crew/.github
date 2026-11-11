@@ -24,7 +24,6 @@ jobs:
           private-key: ${{ secrets.app_secret_key }}
           owner: ${{ github.repository_owner }}
           repositories: ${{ github.event.repository.name }}
-          permission-contents: write
 
       - name: Checkout Local Repository
         uses: actions/checkout@v7
