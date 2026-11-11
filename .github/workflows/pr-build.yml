@@ -62,9 +62,8 @@ jobs:
           vars:
             |
             user: ${{ github.event.pull_request.user.login }}
-            hash: test
-            logs: test_3
-            link: test_1
+            logs: ${{ steps.upload-build.outputs.artifact-url }}
+            link: ${{ steps.upload-step.outputs.artifact-url }}
 
       - uses: peter-evans/create-or-update-comment@v4
         with:
