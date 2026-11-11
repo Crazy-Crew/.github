@@ -1,4 +1,4 @@
-name: Build Pull Request
+name: Reply Pull Request
 
 on:
   workflow_call:
@@ -13,6 +13,7 @@ on:
         required: true
 
 permissions:
+  pull-requests: write
   actions: read
 
 jobs:
@@ -60,17 +61,7 @@ jobs:
             logs: ${{ steps.upload-build.outputs.artifact-url }}
             link: ${{ steps.upload-step.outputs.artifact-url }}
 
-      - name: Download Pull Request Number
-        uses: actions/download-artifact@v4
-        with:
-         run-id: ${{ github.event.workflow_run.id }}
-
-      - name: Read Pull Request Number
-        id: request_number
-        run: |
-          echo "number=$(cat request_number.txt)" >> "$GITHUB_OUTPUT"
-
-      - uses: peter-evans/create-or-update-comment@v4
+      - uses: peter-evans/create-or-update-comment@v5
         with:
           token: ${{ steps.generate-token.outputs.token }}
           issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
