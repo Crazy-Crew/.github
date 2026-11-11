@@ -13,7 +13,13 @@ on:
         default: "build/libs"
 
     secrets:
-      gh_token:
+      app_secret_key:
+        required: true
+      app_id:
+        required: true
+      gpg_private_key:
+        required: true
+      gpg_passphrase:
         required: true
 
 permissions:
@@ -26,6 +32,14 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, inputs.label)
 
     steps:
+      - uses: actions/create-github-app-token@v3
+        id: generate-token
+        with:
+          client-id: ${{ secrets.app_id }}
+          private-key: ${{ secrets.app_secret_key }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
@@ -41,13 +55,10 @@ jobs:
       - name: Build
         run: gradle build --stacktrace
 
-      - name: Prepare build number
+      - name: Set build number
         env:
-          GH_TOKEN: ${{ secrets.gh_token }}
-          GH_REPO: ${{ github.repository }}
-        run: |
-          gh variable set NEXT_BUILD_NUMBER --body "${{ github.event.number }}"
-          echo "NEXT_BUILD_NUMBER=${{ github.event.number }}" >> "$GITHUB_ENV"
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: gh variable set NEXT_BUILD_NUMBER --body "${{ github.event.number }}" --repo ${{ github.repository }}
 
       - name: Upload Plugin
         uses: actions/upload-artifact@v7
