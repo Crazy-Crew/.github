@@ -37,7 +37,12 @@ jobs:
       - name: Build
         run: gradle build --stacktrace
 
+      - name: Save PR number
+        run: echo ${{ github.event.number }} > request_number.txt
+
       - name: Upload Plugin
         uses: actions/upload-artifact@v7
         with:
-          path: ${{ inputs.path }}
+          path: |
+            ${{ inputs.path }}
+            request_number.txt

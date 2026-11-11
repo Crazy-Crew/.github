@@ -57,8 +57,18 @@ jobs:
             logs: ${{ steps.upload-build.outputs.artifact-url }}
             link: ${{ steps.upload-step.outputs.artifact-url }}
 
+      - name: Download Pull Request Number
+        uses: actions/download-artifact@v4
+        with:
+         run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Read Pull Request Number
+        id: request_number
+        run: |
+          echo "number=$(cat request_number.txt)" >> "$GITHUB_OUTPUT"
+
       - uses: peter-evans/create-or-update-comment@v4
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          issue-number: ${{ github.event.pull_request.number }}
+          issue-number: ${{ steps.request_number.outputs.number }}
           body: ${{ steps.template.outputs.result }}
