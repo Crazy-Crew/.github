@@ -75,3 +75,4 @@ jobs:
           token: ${{ steps.generate-token.outputs.token }}
           issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
           body: ${{ steps.template.outputs.result }}
+          edit-mode: replace
