@@ -12,10 +12,6 @@ on:
       gpg_passphrase:
         required: true
 
-permissions:
-  pull-requests: write
-  actions: read
-
 jobs:
   build:
     runs-on: ubuntu-latest
