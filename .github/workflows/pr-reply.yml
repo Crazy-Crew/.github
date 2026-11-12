@@ -7,10 +7,6 @@ on:
         required: true
       app_id:
         required: true
-      gpg_private_key:
-        required: true
-      gpg_passphrase:
-        required: true
 
 jobs:
   build:
@@ -24,27 +20,14 @@ jobs:
           private-key: ${{ secrets.app_secret_key }}
           owner: ${{ github.repository_owner }}
           repositories: ${{ github.event.repository.name }}
-          permission-contents: write
-
-      - name: Checkout Local Repository
-        uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-          fetch-depth: 0
 
       - name: Checkout Parent Repository
         uses: actions/checkout@v7
         with:
           persist-credentials: false
           repository: Crazy-Crew/.github
+          sparse-checkout: .github/build_finished.md
           path: .github
-
-      - uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.gpg_private_key }}
-          passphrase: ${{ secrets.gpg_passphrase }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
 
       - name: Render template
         id: template
@@ -57,12 +40,12 @@ jobs:
             logs: ${{ steps.upload-build.outputs.artifact-url }}
             link: ${{ steps.upload-step.outputs.artifact-url }}
 
-      - name: Find Comment
-        uses: peter-evans/find-comment@v4
-        id: fc
-        with:
-          issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
-          comment-author: crazy-crew
+      #- #name: Find Comment
+        #uses: peter-evans/find-comment@v4
+        #id: fc
+        #with:
+        #  issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
+        #  comment-author: crazy-crew
 
       - uses: peter-evans/create-or-update-comment@v5
         with:
@@ -70,4 +53,3 @@ jobs:
           #comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
           body: ${{ steps.template.outputs.result }}
-          edit-mode: replace

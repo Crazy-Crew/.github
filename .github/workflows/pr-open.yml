@@ -7,10 +7,6 @@ on:
         required: true
       app_id:
         required: true
-      gpg_private_key:
-        required: true
-      gpg_passphrase:
-        required: true
 
 jobs:
   build:
@@ -25,24 +21,13 @@ jobs:
           owner: ${{ github.repository_owner }}
           repositories: ${{ github.event.repository.name }}
 
-      - name: Checkout Local Repository
-        uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-
       - name: Checkout Parent Repository
         uses: actions/checkout@v7
         with:
           persist-credentials: false
           repository: Crazy-Crew/.github
+          sparse-checkout: .github/request_opened.md
           path: .github
-
-      - uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.gpg_private_key }}
-          passphrase: ${{ secrets.gpg_passphrase }}
-          git_user_signingkey: true
-          git_commit_gpgsign: true
 
       - name: Render template
         id: template
