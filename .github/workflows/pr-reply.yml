@@ -2,6 +2,11 @@ name: Reply Pull Request
 
 on:
   workflow_call:
+    inputs:
+      project:
+        required: true
+        type: string
+
     secrets:
       app_secret_key:
         required: true
@@ -29,6 +34,13 @@ jobs:
           sparse-checkout: .github/build_finished.md
           path: .github
 
+      - name: Download our jar file!
+        id: download-jar
+        uses: actions/download-artifact@v8
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          name: ${{ inputs.project }}
+
       - name: Render template
         id: template
         uses: chuhlomin/render-template@v1.4
@@ -36,20 +48,21 @@ jobs:
           template: .github/.github/build_finished.md
           vars:
             |
-            user: ${{ github.event.pull_request.user.login }}
-            logs: ${{ steps.upload-build.outputs.artifact-url }}
-            link: ${{ steps.upload-step.outputs.artifact-url }}
+            user: ${{ github.event.issue.user.login }}
+            logs: ${{ github.event.workflow_run.html_url }}
+            link: ${{ github.event.workflow_run.html_url }}#artifacts
 
-      #- #name: Find Comment
-        #uses: peter-evans/find-comment@v4
-        #id: fc
-        #with:
-        #  issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
-        #  comment-author: crazy-crew
+      - name: Find Comment
+        uses: peter-evans/find-comment@v4
+        id: fc
+        with:
+          issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
+          comment-author: crazy-crew
 
       - uses: peter-evans/create-or-update-comment@v5
         with:
           token: ${{ steps.generate-token.outputs.token }}
-          #comment-id: ${{ steps.fc.outputs.comment-id }}
+          comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ vars.NEXT_BUILD_NUMBER }}
           body: ${{ steps.template.outputs.result }}
+          edit-mode: append
