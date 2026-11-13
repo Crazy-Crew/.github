@@ -36,8 +36,10 @@ jobs:
           template: .github/.github/build_finished.md
           vars:
             |
-            user: ${{ github.event.issue.user.login }}
+            user: ${{ github.event.pull_request.user.login }}
             link: ${{ vars.ARTIFACT_LINK }}
+            sha: ${{ github.sha }}
+            days: ${{ github.retention_days }}
 
       - name: Find Comment
         uses: peter-evans/find-comment@v4
