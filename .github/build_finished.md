@@ -8,5 +8,4 @@ The build task for your pull request or latest commit has been completed!
 
 | Name | Link |
 | -----------------------  | ----------------------- |
-| Build Logs | {{ .logs }} |
 | Download Link | {{ .link }}|
