@@ -17,10 +17,6 @@ on:
         required: true
       app_id:
         required: true
-      gpg_private_key:
-        required: true
-      gpg_passphrase:
-        required: true
 
 permissions:
   contents: read
