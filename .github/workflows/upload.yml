@@ -54,14 +54,20 @@ jobs:
       - name: Build
         run: gradle build --stacktrace
 
-      - name: Set build number
+      - name: Update Build Variable
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: gh variable set NEXT_BUILD_NUMBER --body "${{ github.event.number }}" --repo ${{ github.repository }}
 
       - name: Upload Plugin
+        id: upload-plugin
         uses: actions/upload-artifact@v7
         with:
           name: ${{ inputs.project }}
           path: ${{ inputs.path }}
           retention-days: 3
+
+      - name: Update Artifact Variable
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: gh variable set ARTIFACT_LINK --body "${{ steps.upload-plugin.outputs.artifact-url }}" --repo ${{ github.repository }}
