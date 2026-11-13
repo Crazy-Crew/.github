@@ -2,11 +2,6 @@ name: Reply Pull Request
 
 on:
   workflow_call:
-    inputs:
-      project:
-        required: true
-        type: string
-
     secrets:
       app_secret_key:
         required: true
@@ -33,13 +28,6 @@ jobs:
           repository: Crazy-Crew/.github
           sparse-checkout: .github/build_finished.md
           path: .github
-
-      - name: Download our jar file!
-        id: download-jar
-        uses: actions/download-artifact@v8
-        with:
-          run-id: ${{ github.event.workflow_run.id }}
-          name: ${{ inputs.project }}
 
       - name: Render template
         id: template

@@ -11,9 +11,6 @@ on:
         required: false
         type: string
         default: "build/libs"
-      project:
-        required: true
-        type: string
 
     secrets:
       app_secret_key:
@@ -63,7 +60,6 @@ jobs:
         id: upload-plugin
         uses: actions/upload-artifact@v7
         with:
-          name: ${{ inputs.project }}
           path: ${{ inputs.path }}
           retention-days: 3
 
